@@ -1,0 +1,23 @@
+body {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+}
+
+.header__text-box--heading-primary {
+
+    &-main {
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 3.7rem;
+        font-weight: 400;
+        letter-spacing: .125rem;
+    }
+
+    &-sub {
+        font-family: 'Italianno', cursive;
+        font-size: 3.3rem;
+        font-weight: 100;
+        letter-spacing: .2rem;
+    }
+}

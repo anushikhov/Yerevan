@@ -1,0 +1,37 @@
+.header {
+    height: 100vh;
+    background-image: radial-gradient(circle, 
+        rgba(217,21,101,0.29175420168067223) 54%, 
+        rgba(228,160,58,0.5802696078431373) 100%),
+        url(../img/Kievyan.jpg);
+    background-size: cover;
+    background-position: 100% 100%;
+    position: relative;
+
+    &__text-box {
+        position: absolute;
+        top: 38%;
+        left: 32%;
+        zoom: 97%;   
+        text-align: center;
+
+        &--heading-primary {
+            color: #fff;
+            opacity: .95;
+            margin: 3.125rem;
+
+            &-main {
+                display: block;
+                animation: animateHeader 2s ease-out 1s;
+                animation-fill-mode: backwards;
+            }
+
+            &-sub {
+                display: block;
+                animation: animateHeader 2s ease-out 3s;
+                animation-fill-mode: backwards;
+                backface-visibility: hidden;
+            }
+        }
+    }
+}

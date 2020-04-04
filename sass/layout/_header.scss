@@ -1,8 +1,8 @@
 .header {
     height: 100vh;
     background-image: radial-gradient(circle, 
-        rgba(217,21,101,0.29175420168067223) 54%, 
-        rgba(228,160,58,0.5802696078431373) 100%),
+        rgba($color-razzmatazz, 0.29) 54%,
+        rgba($color-tuliptree, 0.58) 100%),
         url(../img/Kievyan.jpg);
     background-size: cover;
     background-position: 100% 100%;
@@ -16,19 +16,19 @@
         text-align: center;
 
         &--heading-primary {
-            color: #fff;
+            color: $color-white;
             opacity: .95;
             margin: 3.125rem;
 
             &-main {
                 display: block;
-                animation: animateHeader 2s ease-out 1s;
+                animation: animateHeader 1s ease-out .5s;
                 animation-fill-mode: backwards;
             }
 
             &-sub {
                 display: block;
-                animation: animateHeader 2s ease-out 3s;
+                animation: animateHeader 1s ease-out 2s;
                 animation-fill-mode: backwards;
                 backface-visibility: hidden;
             }

@@ -1,53 +1,55 @@
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Cormorant', serif;
-    border-radius: 6.25rem;
-    padding: .0625rem .7rem;
-    transition: all .4s;
-    position: relative;
-}
+.btn {
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-family: 'Cormorant', serif;
+        border-radius: 6.25rem;
+        padding: .0625rem .7rem;
+        transition: all .4s;
+        position: relative;
+    }
 
-.btn--main {
-    color: rgba(247, 247, 247, 0.959);
-    background-color: rgba(198, 137, 204, 0.199);
-    font-size: 1.4rem;
-}
+    &--main {
+        color: rgba($color-alabaster, 0.959);
+        background-color: rgba($color-eastside, 0.199);
+        font-size: 1.4rem;
 
-.btn:hover {
-    transform: translateY(-.0625rem);
-    box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, .3);
-}
+        &::after {
+            background-color: rgba($color-eastside, 0.199);
+        }
+    }
 
-.btn:active {
-    transform: translateY(-.03125rem);
-    box-shadow: 0 .3125rem .625rem rgba(0, 0, 0, .2);
-}
+    &:hover {
+        transform: translateY(-.0625rem);
+        box-shadow: 0 1.25rem 1.25rem rgba($color-black, .3);
 
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 6.25rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .3s;
-}
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
 
-.btn--main::after {
-    background-color: rgba(198, 137, 204, 0.199);
-}
+    &:active {
+        transform: translateY(-.03125rem);
+        box-shadow: 0 .3125rem .625rem rgba($color-black, .2);
+    }
 
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 6.25rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .3s;
+    }
 
-.btn--animated {
-    animation: moveButton 2s ease-out 5s;
-    animation-fill-mode: backwards;
+    &--animated {
+        animation: moveButton 1.5s ease-out 3s;
+        animation-fill-mode: backwards;
+    }
 }

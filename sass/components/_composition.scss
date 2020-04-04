@@ -1,0 +1,29 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 50%;
+        box-shadow: 0 2.5rem 4rem rgba($color-black, .4);
+        border-radius: .15rem;
+        position: absolute;
+        z-index: 10;
+        transition: all .5s;
+
+        &--1 {
+            @include transformColPh(1rem, 2.3rem, 5rem, 2.7rem);
+        }
+    
+        &--2 {
+            @include transformColPh(15rem, 4rem, -3.2rem, .5rem);
+        }
+    
+        &--3 {
+            @include transformColPh(3rem, 10.2rem, 3.4rem, -2.3rem);
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+
+}

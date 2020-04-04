@@ -1,0 +1,32 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin colorifyText {
+    background-image: linear-gradient(to right bottom, $color-eggplant-violet, $color-tango-orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: .1rem .5rem .3rem rgba($color-black, .2);
+}
+
+@mixin transformColPh($left, $top, $transX, $transY) {
+    left: $left;
+    top: $top;
+    &:hover {
+        transform: scale(2) translateX($transX) translateY($transY);
+        box-shadow: 0 1rem 4rem rgba($color-black, .3);
+        z-index: 20;
+    }
+}
+
+@mixin colorifySelect {
+    &::selection {
+        color: pink;
+        background: purple;
+    }
+}

@@ -2,10 +2,12 @@ body {
     font-family: 'Cormorant', serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
+    color: $color-tundora;
 }
 
 .header__text-box--heading-primary {
+    
+    @include colorifySelect;
 
     &-main {
         font-family: 'Fredericka the Great', cursive;
@@ -19,5 +21,38 @@ body {
         font-size: 3.3rem;
         font-weight: 100;
         letter-spacing: .2rem;
+    }
+}
+
+.heading-secondary {
+    font-size: 2.7rem;
+    letter-spacing: .2rem;
+
+    @include colorifyText;
+    @include colorifySelect;
+
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(.7);
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    @include colorifyText;
+    @include colorifySelect;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    text-align: justify;
+    @include colorifyText;
+    @include colorifySelect;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
     }
 }
